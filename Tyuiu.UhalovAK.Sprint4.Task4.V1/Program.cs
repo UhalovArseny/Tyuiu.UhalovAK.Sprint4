@@ -1,6 +1,6 @@
-﻿
-using Tyuiu.UhalovAK.Sprint4.Task3.V13.Lib;
-namespace Tyuiu.UhalovAK.Sprint4.Task3.V13
+﻿using Tyuiu.UhalovAK.Sprint4.Task4.V1.Lib;
+
+namespace Tyuiu.UhalovAK.Sprint4.Task4.V1
 {
     internal class Program
     {
@@ -18,26 +18,28 @@ namespace Tyuiu.UhalovAK.Sprint4.Task3.V13
 
 
             DataService ds = new DataService();
+            
+            int str = Convert.ToInt32(Console.ReadLine());
+            int stl = Convert.ToInt32(Console.ReadLine());
+            int[,] mtrx = new int[str, stl];
 
-            int[,] mas1 = new int[5, 5]{ {4, 7, 4, 2, 1 },
-
-                                         {6, 7, 3, 6, 5 },
-
-                                         {6, 5, 3, 3, 5 },
-
-                                         {4, 4, 6, 4, 7 },
-
-                                         {2, 1, 2, 3, 4 } };
-
-
-
-
+            for (int i = 0; i <= str; i++)
+            {
+                for (int j = 0; i <= stl; i++)
+                {
+                    mtrx[i,j] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
 
 
+            
 
 
 
-            int z = ds.Calculate(mas1);
+
+
+
+            int z = ds.Calculate(mtrx);
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
